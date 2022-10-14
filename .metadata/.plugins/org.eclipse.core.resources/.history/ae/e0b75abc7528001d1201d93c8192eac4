@@ -1,0 +1,31 @@
+package com.AgileCrmAutomation;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+
+public class BaseClass 
+{
+	public static WebDriver driver=null;
+	public void launchBrowser(String browser)
+	{
+		switch(browser)
+		{
+		case "chrome":
+			System.setProperty("webdriver.chrome.driver", "C:\\Tool\\chromedriver_win32 (1)\\chromedriver.exe");
+			driver=new ChromeDriver();
+			break;
+		case "edge":
+			System.setProperty("webdriver.edge.driver", "C:\\Tool\\edgedriver_win64\\msedgedriver.exe");
+			driver=new EdgeDriver();
+			break;
+		case "mozila":
+			System.setProperty("webdriver.mozila.driver", "C:\\Tool\\firefoxdriver.exe");
+			driver=new ChromeDriver();
+			break;
+		default:
+			System.setProperty("webdriver.chrome.driver", "C:\\Tool\\chromedriver.exe");
+			driver=new ChromeDriver();
+			}
+	}
+}
