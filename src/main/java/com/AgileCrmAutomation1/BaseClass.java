@@ -28,18 +28,18 @@ public class BaseClass {
 	public static WebDriver driver = null;
 
 	public static void launchBrowser(String browser) {
-		switch (browser) {
+		switch(browser) {
 		case "chrome":
-			System.setProperty("webdriver.chrome.driver", "C:\\Tool\\chromedriver_win32 (2)\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "C:\\Tool\\chromedriver_win32(2)\\chromedriver.exe");
 			//WebDriverManager.Chromedriver().setup();
 			//driver = new ChromeDriver(option);
-			driver = new ChromeDriver();
+			driver =new ChromeDriver();
 			break;
 		case "edge":
 			System.setProperty("webdriver.edge.driver", "C:\\Tool\\edgedriver_win64\\msedgedriver.exe");
 			//WebDriverManager.EdgeDriver().setup();
 			//driver = new EdgeDriver(option);
-			driver = new EdgeDriver();
+			driver =new EdgeDriver();
 			break;
 
 		case "mozila":
@@ -136,10 +136,10 @@ public class BaseClass {
 			prefs.put("download.default_directory", "/directory/path");
 			option.setExperimentalOption("excludeSwitches", Arrays.asList("disable-popup-blocking"));
 		return option;
-		}
+	}
 
-		//for updated version of mozila
-		private static FirefoxOptions setFirefoxCapabilities()
+		//for updated version of mozilla
+	private static FirefoxOptions setFirefoxCapabilities()
 		{
 			FirefoxOptions option=new FirefoxOptions();
 			option.addArguments("start-maximized");
@@ -147,7 +147,7 @@ public class BaseClass {
 			prefs.put("download.default_directory", "/directory/path");
 			//option.setExperimentalOption("excludeSwitches", Arrays.asList("disable-popup-blocking"));
 			return option;
-		}		
+	}		
 }
 
 
